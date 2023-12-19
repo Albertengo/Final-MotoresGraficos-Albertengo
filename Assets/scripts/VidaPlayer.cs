@@ -19,7 +19,7 @@ namespace Player
         {
             Salud = SaludMax;
             healthbar.startHealthBar(Salud);
-            Debug.Log("Nivel de vida: " + Salud);
+            //Debug.Log("Nivel de vida: " + Salud);
         }
 
         #endregion
@@ -37,7 +37,7 @@ namespace Player
         {
             Salud -= dañoRecibido;
             healthbar.SetHealth(Salud);
-            Debug.Log("Recibi daño de: " + dañoRecibido);
+            //Debug.Log("Recibi daño de: " + dañoRecibido);
             if (Salud <= 0)
             {
                 //Debug.Log("Moriste.");

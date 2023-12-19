@@ -10,6 +10,7 @@ namespace interfaz
         public GameObject MenuPausa;
         public bool isPaused;
         public SliderHealth slider;
+        public Desactivar crosshair;
         public GameObject Objetivos;
         public GameObject musica;
         #endregion
@@ -32,11 +33,13 @@ namespace interfaz
                 {
                     ResumeGame();
                     slider.Activar();
+                    crosshair.gameObject.SetActive(true);
                 }
                 else //mientras el juego esté activo, lo único que hará el escape será pausarlo.
                 {
                     PauseGame();
                     slider.Desactivar();
+                    crosshair.gameObject.SetActive(false);
                 }
             }
         }

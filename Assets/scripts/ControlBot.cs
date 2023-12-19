@@ -32,23 +32,23 @@ namespace enemigos
             rb = GetComponent<Rigidbody>();
             rb.freezeRotation = true; //para que no se caiga.
         }
-        private void Update()  //persecución al jugador
+        private void Update()
         {
-            enemy.SetDestination(player.position);
-            transform.LookAt(player);
-            animaciones();
+            persecucion();
         }
         #endregion
 
         #region code
-        void animaciones()
+        void persecucion() //para que el bot busque al player
         {
+            enemy.SetDestination(player.position);
+            transform.LookAt(player);
             animator.SetBool("caminando", true);
         }
         public void recibirDaño() //lógica para recibir daño
         {
             hp = hp - 25;
-            if (hp <= 0)
+            if (hp == 0)
             {
                 animator.SetBool("Muerte", true);
                 Destroy(gameObject, 2f);
@@ -63,17 +63,6 @@ namespace enemigos
             {
                 recibirDaño();
             }
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                Debug.Log("dañando a jugador");
-                animator.SetBool("Attack", true);
-                DesactivarAtaque(5.0f);
-            }
-        }
-        void DesactivarAtaque(float cooldown) //para que luego de un ataque se desactive la animacion y vuelva a la de correr
-        {
-            new WaitForSeconds(cooldown);
-            animator.SetBool("Attack", false);
         }
         #endregion
     }

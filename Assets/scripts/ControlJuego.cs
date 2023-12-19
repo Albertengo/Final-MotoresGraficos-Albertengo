@@ -15,6 +15,7 @@ public class ControlJuego : MonoBehaviour
     public Win_Lose screenW;
     public Win_Lose screenL;
     public SliderHealth slider;
+    public Desactivar crosshair;
     public static float tiempoRestante;
 
     [Header("Spawner")]
@@ -44,9 +45,9 @@ public class ControlJuego : MonoBehaviour
     #region Code
     void ComenzarJuego() //configura la inicializacion del juego. (posición, cronómetro y spawns)
     {
-        //jugador.transform.position = new Vector3(0f, 2.07f, 0f);
         StartCoroutine(SpawnEnemigos());
         StartCoroutine(Cronometro(60));
+        crosshair.gameObject.SetActive(true);
     }
     IEnumerator SpawnEnemigos()
     {
