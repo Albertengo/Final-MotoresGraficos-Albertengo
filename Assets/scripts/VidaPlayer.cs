@@ -12,6 +12,7 @@ namespace Player
         public float Salud;
         public SliderHealth healthbar;
         public Win_Lose screenL;
+        public Desactivar crosshair;
         #endregion
 
         #region funciones basicas
@@ -43,6 +44,7 @@ namespace Player
                 //Debug.Log("Moriste.");
                 screenL.ActiveScreen();
                 healthbar.Desactivar();
+                crosshair.gameObject.SetActive(false);
             }
         }
         #endregion

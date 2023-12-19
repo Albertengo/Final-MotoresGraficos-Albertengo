@@ -25,6 +25,10 @@ public class ControlJuego : MonoBehaviour
     #endregion
 
     #region voids basicos
+    private void Awake()
+    {
+        crosshair.gameObject.SetActive(true);
+    }
     void Start()
     {
         ComenzarJuego();
@@ -38,16 +42,16 @@ public class ControlJuego : MonoBehaviour
             ComenzarJuego();
             screenL.ActiveScreen();
             slider.Desactivar();
+            crosshair.gameObject.SetActive(false);
         }
     }
     #endregion
 
     #region Code
-    void ComenzarJuego() //configura la inicializacion del juego. (posición, cronómetro y spawns)
+    void ComenzarJuego() //configura la inicializacion del juego. (cronómetro y spawns)
     {
         StartCoroutine(SpawnEnemigos());
         StartCoroutine(Cronometro(60));
-        crosshair.gameObject.SetActive(true);
     }
     IEnumerator SpawnEnemigos()
     {

@@ -734,7 +734,7 @@ MonoBehaviour:
   MenuPausa: {fileID: 219854885}
   isPaused: 0
   slider: {fileID: 538908777}
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 968503795}
   Objetivos: {fileID: 527937536}
   musica: {fileID: 167799855}
 --- !u!1 &156976338
@@ -1722,6 +1722,7 @@ MonoBehaviour:
   Salud: 0
   healthbar: {fileID: 538908777}
   screenL: {fileID: 247687021}
+  crosshair: {fileID: 968503795}
 --- !u!114 &422258823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1759,6 +1760,7 @@ MonoBehaviour:
   GroundDrag: 100
   slider: {fileID: 538908777}
   screenW: {fileID: 6644905}
+  crosshair: {fileID: 968503795}
 --- !u!4 &422258825
 Transform:
   m_ObjectHideFlags: 0
@@ -2364,7 +2366,7 @@ RectTransform:
   m_GameObject: {fileID: 538908774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7414684, y: 0.7414684, z: 0.7414684}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1921386972}
@@ -2373,7 +2375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -349, y: -261}
+  m_AnchoredPosition: {x: -323, y: -263}
   m_SizeDelta: {x: 315.5925, y: 39.4491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538908776
@@ -3992,45 +3994,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020959310}
   m_CullTransparentMesh: 1
---- !u!21 &1059773123
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/DarkBringerRefined_1_2
-  m_Shader: {fileID: 4800000, guid: 99d80d0fdb7c6724c89e77d81bbc026a, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BayerTex:
-        m_Texture: {fileID: 2800000, guid: eac7505667530464e91debe0b4a8492b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Lut2D:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats: []
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1 &1115411464
 GameObject:
   m_ObjectHideFlags: 0
@@ -5280,7 +5243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sha: {fileID: 4800000, guid: 99d80d0fdb7c6724c89e77d81bbc026a, type: 3}
-  mat: {fileID: 1059773123}
+  mat: {fileID: 0}
   flatLut: {fileID: 2800000, guid: dc6c5d1dde074fc41b7d214a43eee86f, type: 3}
   bayerTexture: {fileID: 2800000, guid: eac7505667530464e91debe0b4a8492b, type: 3}
   ColorBleed: 0.25

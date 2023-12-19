@@ -23,6 +23,7 @@ namespace Player
         [Header("UI")]
         public SliderHealth slider;
         public Win_Lose screenW;
+        public Desactivar crosshair;
         #endregion
 
         #region voids basicos
@@ -88,6 +89,7 @@ namespace Player
             {
                 screenW.ActiveScreen();
                 slider.Desactivar();
+                crosshair.gameObject.SetActive(false);
             }
         }
         #endregion
